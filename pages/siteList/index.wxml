@@ -1,0 +1,5 @@
+<!--index.wxml-->
+<view class="container">
+  <subMenu target="{{siteTarget}}" subMenuData="{{subMenuData}}" bind:changeData="changeData" />
+  <siteList target="{{siteTarget}}" listData="{{siteList}}" />
+</view>

@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='index-search'>
+    <image class="index-logo" src='http://www.jary8.com/static/images/logo.png'></image>
+    <view class='search-cont'>
+      <button title="GO" class='submit icon-font icon-search'></button>
+      <view class='search-input'>
+        <text class='text'>搜索感兴趣的前端文章</text>
+      </view>
+    </view>
+  </view>
+  <indexList listTitle="推荐文章" listData="{{articleList}}" listTarget="/pages/articleList/index"  />
+  <indexList listTitle="推荐网站" listData="{{siteList}}" listTarget="/pages/siteList/index" />
+</view>

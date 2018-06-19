@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="list-mode">
+  <view class="list-item" wx:for="{{listData}}" wx:key="{{key}}">
+    <view class="item-tags" wx:if="{{target === '全部'}}">
+      <text class="tags-item {{item.category === '技术' ? 'tags-item1' : ''}} {{item.category === '工具' ? 'tags-item2' : ''}} {{item.category === '其他' ? 'tags-item3' : ''}}">{{item.category}}</text>
+    </view>
+    <view class="item-title">{{item.title}}</view>
+    <view class="item-info">{{item.description}}</view>
+  </view>
+</view>

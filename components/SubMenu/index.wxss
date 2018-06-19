@@ -1,0 +1,4 @@
+.sub-menu{height:96rpx;margin-bottom:20rpx;}
+.sub-menu .sub-menu-cont{display:flex;position:fixed;top:0;left:0;right:0;z-index:98;height:96rpx;background-color:#fff;border-bottom:1px solid #dfdfdf;}
+.sub-menu .menu-item{flex:1;text-align:center;line-height:96rpx;font-size:30rpx;}
+.sub-menu .cur{border-bottom:2px solid #c00;color:#c00;}

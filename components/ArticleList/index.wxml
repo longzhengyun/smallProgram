@@ -1,0 +1,13 @@
+<!--index.wxml-->
+<view class="list-mode">
+  <view class="list-item" wx:for="{{listData}}" wx:key="{{key}}">
+    <view class="item-title">{{item.title}}</view>
+    <view class="item-info">{{item.description}}</view>
+    <view class="item-more">
+      <view class="item-tags" wx:if="{{target === '全部'}}">
+        <text class="tags-item {{item.category === 'HTML' ? 'tags-item1' : ''}} {{item.category === 'CSS' ? 'tags-item2' : ''}} {{item.category === 'JavaScript' ? 'tags-item3' : ''}} {{item.category === '杂谈' ? 'tags-item4' : ''}}">{{item.category}}</text>
+      </view>
+      <view class="item-date">{{item.date}}</view>
+    </view>
+  </view>
+</view>

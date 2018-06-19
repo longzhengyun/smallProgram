@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "推荐网站",
+  "usingComponents": {
+    "subMenu": "/components/SubMenu/index",
+    "siteList": "/components/SiteList/index"
+  }
+}

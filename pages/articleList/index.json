@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "推荐文章",
+  "usingComponents": {
+    "subMenu": "/components/SubMenu/index",
+    "articleList": "/components/ArticleList/index"
+  }
+}

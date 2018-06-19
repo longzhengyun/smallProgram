@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="sub-menu">
+  <view class='sub-menu-cont'>
+    <view class="menu-item {{ item === target ? 'cur' : '' }}" wx:for="{{subMenuData}}" wx:key="{{key}}" data-item="{{item}}" bindtap='changeSubMenu'>{{item}}</view>
+  </view>
+</view>

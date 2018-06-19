@@ -1,0 +1,8 @@
+.list-mode{margin-top:20rpx;}
+.list-mode .mode-title{height:72rpx;margin-bottom:1px;padding:0 20rpx;line-height:72rpx;background-color:#fff;}
+.list-mode .mode-title .btn-action{float:right;padding:0 20rpx;font-size:24rpx;}
+.list-mode .mode-title .action-item{display:inline-block;vertical-align:top;margin-left:10rpx;color:#999;}
+.list-mode .mode-title .title-name{font-size:28rpx;font-weight:normal;}
+.list-mode .mode-cont{background-color:#fff;padding:20rpx 0;}
+.list-mode .mode-cont .list-item{display:inline-block;width:49.999%;height:55rpx;line-height:55rpx;padding:0 20rpx;border-right:1px solid #eee;-webkit-box-sizing:border-box;box-sizing:border-box;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;font-size:24rpx;}
+.list-mode .mode-cont .list-item:nth-child(2n){border-right:none;}
