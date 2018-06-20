@@ -9,46 +9,38 @@ Page({
   },
   onLoad: function () {
     // 获取文章数据
-    this.getContData('articleData', 'article_data', (data) => {
+    this.getContData('articleData', 'article_data', 10, (data) => {
       this.setData({ articleList: data })
     })
 
     // 获取网站数据
-    this.getContData('siteData', 'site_data', (data) => {
+    this.getContData('siteData', 'site_data', 8, (data) => {
       this.setData({ siteList: data })
     })
   },
-  initData (data) { // 初始化数据
+  initData (data, length) { // 初始化数据
     let array = []
     if (data.length) {
-      data.map((item, key) => {
-        if (key < 10) {
+      data.map((item) => {
+        if (item.hot === 'y' && array.length < length) {
           array.push(item)
         }
       })
     }
     return array
   },
-  sortData (data) { // 初始化数据
-    data.sort((a, b) => {
-      return b.date - a.date
-    })
-    return data
-  },
-  getContData (key, id, callback) { // 获取数据
+  getContData (key, id, length, callback) { // 获取数据
     wx.getStorage({
       key,
       success: (res) => {
         if (res.errMsg === 'getStorage:ok') {
-          let data = this.initData(res.data)
-          this.sortData(data)
+          let data = this.initData(res.data, length)
           callback(data)
         }
       },
-      fail: (res) => {
+      fail: () => {
         app.func.getData(id, (res) => {
-          let data = this.initData(res.db_data)
-          this.sortData(data)
+          let data = this.initData(res, length)
           callback(data)
         })
       }

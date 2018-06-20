@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/articleList/index",
+    "pages/articleDetail/index",
     "pages/siteList/index",
     "pages/owner/index",
     "pages/logs/logs"

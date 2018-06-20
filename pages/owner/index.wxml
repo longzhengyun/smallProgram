@@ -1,2 +1,42 @@
-<!--pages/owner/index.wxml-->
-<text>pages/owner/index.wxml</text>
+<!--index.wxml-->
+<view class="container">
+    <view class="form-mode">
+        <view class="form-group form-twin-three form-single">
+            <view class="group-name">英文名</view>
+            <view class="group-cont">Jary</view>
+        </view>
+        <view class="line-between"></view>
+        <view class="form-group form-twin-three form-single">
+            <view class="group-name">Email</view>
+            <view class="group-cont">jary0419@163.com</view>
+        </view>
+        <view class="line-between"></view>
+        <view class="form-group form-twin-three form-single">
+            <view class="group-name">城市</view>
+            <view class="group-cont">武汉</view>
+        </view>
+        <view class="line-between"></view>
+        <view class="form-group form-twin-three form-single">
+            <view class="group-name">职业</view>
+            <view class="group-cont">互联网 - WEB前端开发</view>
+        </view>
+        <view class="line-between"></view>
+        <view class="form-group form-twin-three form-single">
+            <view class="group-name">签名</view>
+            <view class="group-cont">天行健 君子以自强不息</view>
+        </view>
+    </view>
+        <view class="form-mode">
+        <view class="form-group form-single">
+            <view class="group-cont group-arrow">个人简历</view>
+        </view>
+        <view class="line-between"></view>
+        <view class="form-group form-single">
+            <view class="group-cont group-arrow">关于佳瑞网</view>
+        </view>
+        <view class="line-between"></view>
+        <view class="form-group form-single">
+            <view class="group-cont group-arrow">佳瑞网APP</view>
+        </view>
+    </view>
+</view>

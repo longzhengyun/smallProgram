@@ -1,0 +1,6 @@
+.detail-mode{background-color:#fff;margin-bottom:20rpx;}
+.detail-mode .detail-title{padding:20rpx;text-align:center;font-size:40rpx;font-weight:normal;line-height:1.5;}
+.detail-mode .detail-data{padding:0 20rpx;text-align:center;font-size:0;color:#999;}
+.detail-mode .detail-data .data-item{display:inline-block;margin:0 10rpx;font-size:28rpx;}
+.detail-mode .detail-cont{padding:20rpx;font-size:32rpx;color:#666;}
+.detail-mode .detail-cont p{margin-bottom:.25rpx;}

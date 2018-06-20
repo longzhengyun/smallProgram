@@ -9,6 +9,6 @@
       </view>
     </view>
   </view>
-  <indexList listTitle="推荐文章" listData="{{articleList}}" listTarget="/pages/articleList/index"  />
-  <indexList listTitle="推荐网站" listData="{{siteList}}" listTarget="/pages/siteList/index" />
+  <indexList listTitle="推荐文章" listCategory="article" showMore="{{true}}" listData="{{articleList}}" listTarget="/pages/articleList/index"  />
+  <indexList listTitle="推荐网站" showMore="{{true}}" listData="{{siteList}}" listTarget="/pages/siteList/index" />
 </view>

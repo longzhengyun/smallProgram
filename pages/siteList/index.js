@@ -15,7 +15,7 @@ Page({
     this.getContData('siteData', 'site_data', siteTarget, (data) => {
       this.setData({ siteList: data })
       // 修改subMenu的值
-      this.setData({ articleTarget })
+      this.setData({ siteTarget })
     })
   },
   initData (data, keyword) { // 初始化数据
@@ -40,9 +40,9 @@ Page({
           callback(data)
         }
       },
-      fail: (res) => {
+      fail: () => {
         app.func.getData(id, (res) => {
-          let data = this.initData(res.db_data, keyword)
+          let data = this.initData(res, keyword)
           callback(data)
         })
       }

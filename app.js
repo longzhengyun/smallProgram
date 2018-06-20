@@ -5,19 +5,19 @@ App({
   onLaunch: function () {
     // 存储文章数据
     getData('article_data', (res) => {
-      if (res && res.db_data) {
+      if (res && res.length) {
         wx.setStorage({
           key: 'articleData',
-          data: res.db_data
+          data: res
         })
       }
     })
     // 存储网站数据
     getData('site_data', (res) => {
-      if (res && res.db_data) {
+      if (res && res.length) {
         wx.setStorage({
           key: 'siteData',
-          data: res.db_data
+          data: res
         })
       }
     })

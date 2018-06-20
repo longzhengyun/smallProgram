@@ -1,10 +1,10 @@
 <!--index.wxml-->
 <view class="list-mode">
   <view class='mode-title'>
-    <navigator class='btn-action' open-type='switchTab' url='{{listTarget}}'>MORE</navigator>
+    <navigator class='btn-action' open-type='switchTab' url='{{listTarget}}' wx:if="{{showMore}}">MORE</navigator>
     <text class='title-name'>{{listTitle}}</text>
   </view>
   <view class='mode-cont'>
-    <view class="list-item" wx:for="{{listData}}" wx:key="{{key}}">{{item.title}}</view>
+    <view class="list-item" wx:for="{{listData}}" wx:key="{{key}}" data-category="{{listCategory}}" data-item="{{item}}" bindtap="goTarget">{{item.title}}</view>
   </view>
 </view>

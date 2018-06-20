@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="detail-mode">
+    <view class="detail-title">{{articleDetail.title}}</view>
+    <view class="detail-data">
+      <text class="data-item">分类：{{articleDetail.category}}</text>
+      <text class="data-item">日期：{{articleDetail.date}}</text>
+    </view>
+    <view class="detail-cont">
+      <rich-text nodes="{{articleDetail.content}}"></rich-text>
+    </view>
+  </view>
+  <indexList listTitle="相关文章" listCategory="article" showMore="{{false}}" listData="{{relevantList}}" />
+</view>

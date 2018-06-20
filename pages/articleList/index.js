@@ -19,10 +19,11 @@ Page({
     })
   },
   initData (data, keyword) { // 初始化数据
-    data.map((item, key) => {
-      item.date = new Date(item.date * 1000).toString().slice(4, 15)
-    })
     let array = []
+    data.map((item, key) => {
+      item.description = item.description.replace(/\/content\/uploadfile\//gi, 'http:\/\/www.jary8.com\/static\/content\/uploadfile\/')
+      item.description = item.description.replace(/\<img/gi, '<img style="display:block;max-width:100%;height:auto" ')
+    })
     if (keyword === '全部') {
       array = data
     } else {
@@ -34,25 +35,18 @@ Page({
     }
     return array
   },
-  sortData (data) { // 初始化数据
-    return data.sort((a, b) => {
-      return b.date - a.date
-    })
-  },
   getContData (key, id, keyword, callback) { // 获取数据
     wx.getStorage({
       key,
       success: (res) => {
         if (res.errMsg === 'getStorage:ok') {
           let data = this.initData(res.data, keyword)
-          data = this.sortData(data)
           callback(data)
         }
       },
-      fail: (res) => {
+      fail: () => {
         app.func.getData(id, (res) => {
-          let data = this.initData(res.db_data, keyword)
-          data = this.sortData(data)
+          let data = this.initData(res, keyword)
           callback(data)
         })
       }
